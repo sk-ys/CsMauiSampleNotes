@@ -7,5 +7,7 @@ public partial class NotePage : ContentPage
 	public NotePage()
 	{
 		InitializeComponent();
+		if (File.Exists(_fileName))
+			TextEditor.Text = File.ReadAllText(_fileName);
 	}
 }
